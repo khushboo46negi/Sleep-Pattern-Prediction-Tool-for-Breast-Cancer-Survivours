@@ -1,0 +1,25 @@
+{% include 'nav.html' %}
+<html>
+<head>
+    <title>Machine Learning Models</title>
+    <style>
+        img.cnn-graph {
+            width: 60%; 
+            height: 50%; 
+        }
+    </style>
+</head>
+<body>
+   <center>
+    <h1>Cnn Graph</h1><hr>
+</center>
+{% if cnn_plot %}
+<img src="data:image/png;base64,{{ cnn_plot }}" alt="CNN Line Graph">
+{% else %}
+    <p>No data available</p>
+{% endif %}
+{% if error %}
+<p>{{ error }}</p>
+{% endif %}
+</body>
+</html>

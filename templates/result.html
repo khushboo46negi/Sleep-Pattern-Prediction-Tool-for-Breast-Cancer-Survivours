@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sleep Metrics Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            border: 4px solid #ddd;
+            border:1
+        }
+        /* Styling for treatment section */
+        .treatment-options {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .treatment-option {
+            display: inline-block;
+            padding: 8px;
+            border: 2px solid #ddd;
+            margin: 4px;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+    {% include 'nav.html' %}
+</head>
+<body>
+    <h2>Sleep Metrics Results</h2>
+
+    <table >
+        <tr>
+            <th colspan="4">Personal Information</th>
+        </tr>
+            <td><b>Name:&emsp;{{ name }}</b></td> 
+            <td><b>Age:&emsp;{{ age}}</b></td>  
+            <td><b>Place:&emsp;{{place}}</b></td>  
+            <table>
+                <tr>
+                    <th colspan="2">Select Your Treatment</th>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="treatment-options">
+                            <div class="treatment-option"><b>Surgery:</b> {{ Surgery }}</div>
+                            <div class="treatment-option"><b>Chemotherapy:</b> {{ Chemotherapy }}</div>
+                            <div class="treatment-option"><b>Radiation:</b> {{ Radiation }}</div>
+                            <div class="treatment-option"><b>Immunotherapy:</b> {{ Immunotherapy }}</div>
+                            <div class="treatment-option"><b>Hormonetherapy:</b> {{ Hormonetherapy }}</div>
+                            <div class="treatment-option"><b>Targeted Therapy:</b> {{ TargetedTherapy }}</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <table>
+        <tr>
+            <th>Metric</th>
+            <th>Calculated Value</th>
+            <th>Actual Value</th>
+        </tr>
+        <tr>
+            <td>Sleep Efficiency</td>
+            <td>{{ sp }}</td>
+            <td>{{ se }}</td>
+        </tr>
+        <tr>
+            <td>Sleep Latency</td>
+            <td>{{ slc }}</td>
+            <td>{{ sll }}</td>
+        </tr>
+        <tr>
+            <td>Sleep Duration</td>
+            <td>{{ spm }}</td>
+            <td>{{ sd }}</td>
+        </tr>
+        <tr>
+            <td>Sleep Disturbance</td>
+            <td>{{ sdc }}</td>
+            <td>{{ sde }}</td>
+        </tr>
+        <tr>
+            <td>Daytime Dysfunction</td>
+            <td>{{ dtf }}</td>
+            <td>{{ dd }}</td>
+        </tr>
+        <tr>
+            <td>Subjective Sleep Quality</td>
+            <td></td> 
+            <td>{{ rsqpm }}</td>
+        </tr>
+        <tr>
+            <td>Use of Sleep Medicine</td>
+            <td></td> <!-- Empty cell for Calculated Value -->
+            <td>{{ ms }}</td>
+        </tr>
+        <tr>
+            <td><b>PSQI Value</b></td>
+            <td></td>
+            <td><b>{{ Psqi }}</b></td>
+           
+        </tr>
+        
+    </table>
+
+    <center><b><p>Sleep Quality: {{ sq }}</p></b></center>
+    <center><b><p>{{sq_message }}</p></b></center>
+<center>
+    <hr>
+    {% if st %}
+    <a href="/recommendation" class="btn btn-info">Recommendation</a>
+    {%endif%}
+
+<hr></center>
+</body>
+</html>

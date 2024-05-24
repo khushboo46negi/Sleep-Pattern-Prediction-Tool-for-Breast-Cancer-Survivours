@@ -1,0 +1,20 @@
+{% include 'nav.html' %}
+<html>
+<head>
+    <title>Machine Learning Models</title>
+    <style>
+        img.knn-graph {
+            width: 60%; 
+            height: 50%%; 
+        }
+    </style>
+</head>
+
+<body>
+   <center>
+    <h1>Knn Graph</h1><hr>
+</center>
+
+    <center><img class="knn-graph" src="data:image/png;base64,{{ knn_plot }}" alt="KNN Graph"><center>
+</body>
+</html>

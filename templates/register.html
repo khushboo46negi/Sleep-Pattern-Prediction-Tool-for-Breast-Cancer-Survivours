@@ -1,0 +1,68 @@
+<html>
+<head>
+    {% include 'nav.html' %}
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 40px;
+            box-shadow: 2px 2px 4px black;
+            width: 500px;
+            transition: box-shadow 0.3s ease;
+        }
+        label {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], input[type="password"] {
+            width: 50%;
+            padding: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 50%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <form method="get">
+            <h3><b>Registration Form</b></h3><br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="n" required><br><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="a" required><br><br>
+            <label for="place">Place:</label>
+            <input type="text" id="place" name="p" required><br><br>
+            <label for="stage">Stage of Breast Cancer:</label>
+            <input type="text" id="stage" name="s" required><br><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="e" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="ps" required><br><br>
+            <input type="submit" value="Register" name="submit" class="btn btn-primary">
+            {% if msg %}
+    <h4>{{ msg }}</h4>
+{% endif %}
+        </form>
+    </center>
+    
+</body>
+</html>

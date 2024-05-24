@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            overflow-x: hidden;
+            
+        }
+        form{
+          padding:10px
+        }
+    </style>
+</head>
+<body style="background: rgb(214,211,213);
+background: radial-gradient(circle, rgba(214,211,213,0.8267682072829132) -13%, rgba(238,234,236,1) 100%);">
+    {% include 'nav.html' %}
+    <center>
+        <br>
+        <h1 style="font-family: Georgia, serif;">Fill Your Information</h1>
+    </center>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8" style="border: 4px solid gray; padding: 0px">
+            <form style="
+            box-shadow: 2px 2px 4px;
+            transition: box-shadow 0.3s ease">
+                <div class="row">
+                    <div class="col">
+                        Name
+                        <input type="text" class="form-control" name="n">
+                    </div>
+                    <div class="col">
+                        Age
+                        <input type="text" class="form-control" name="age">
+                    </div>
+                    <div class="col">
+                        Place
+                        <input type="text" class="form-control" name="place">
+                    </div>
+                </div><br>
+
+                <div class="row">
+                    <!-- First Column -->
+                    <div class="col-md-4">
+                        <h3 style="font-family: 'Times New Roman', Times, serif;">Select Your Treatment</h3>
+                        <div>
+                            Surgery
+                          &emsp;&emsp;&emsp;  <input type="radio" name="Surgery" class="form-check-input" value="Yes">Yes
+                            <input type="radio" name="Surgery" class="form-check-input" value="No">No
+                        </div><br>
+                        <div>
+                            Chemotherapy
+                            <input type="radio" name="Chemotherapy" class="form-check-input" value="Yes">Yes
+                            <input type="radio" name="Chemotherapy" class="form-check-input" value="No">No
+                        </div><br>
+                        <div>
+                            Radiation
+                            &emsp;&emsp;&emsp;<input type="radio" name="Radiation" class="form-check-input" value="Yes">Yes
+                            <input type="radio" name="Radiation" class="form-check-input" value="No">No
+                        </div><br>
+                        <div>
+                          Immunotherapy
+                          <input type="radio" name="Immunotherapy" class="form-check-input" value="Yes">Yes
+                          <input type="radio" name="Immunotherapy" class="form-check-input" value="No">No
+                        </div><br>
+                        <div>
+                          Hormonetherapy
+                          <input type="radio" name="Hormonetherapy" class="form-check-input" value="Yes">Yes
+                          <input type="radio" name="Hormonetherapy" class="form-check-input" value="No">No
+                        </div><br>
+                        <div>
+                          Targeted Therapy
+                          <input type="radio" name="TargetedTherapy" class="form-check-input" value="Yes">Yes
+                          <input type="radio" name="TargetedTherapy" class="form-check-input" value="No">No
+                        </div><br>
+                        <div>
+                            What is your bedtime at night?
+                            <select class="form-select" name="bn">
+                                <option selected disabled>Open this select menu</option>
+                                <option value="7">7 pm</option>
+                                <option value="8">8 pm</option>
+                                <option value="9">9 pm</option>
+                                <option value="10">10 pm</option>
+                                <option value="11">11 pm</option>
+                                <option value="12">12 am</option>
+                            </select>
+                        </div><br>
+                        <div>
+                            In how much time do you fall asleep?
+                            <select class="form-select" name="tfs">
+                                <option selected disabled>Choose one</option>
+                                <option value="<=15">&le; 15 min.</option>
+                                <option value="16-30">16 - 30 min</option>
+                                <option value="31-60">31 - 60 min</option>
+                                <option value=">=61"> &gt;60 min</option>
+                            </select>
+                        </div><br>
+                        <div>
+                            What is the wakeup time in the morning?
+                            <select class="form-select" name="wm">
+                                <option selected disabled>Open this select menu</option>
+                                <option value="4">4 am</option>
+                                <option value="5">5 am</option>
+                                <option value="6">6 am</option>
+                                <option value="7">7 am</option>
+                                <option value="8">8 am</option>
+                            </select>
+                        </div><br>
+                        <div>
+                            How many hours of actual sleep do you get?
+                            <select class="form-select" name="spm">
+                                <option selected disabled>Open this select menu</option>
+                                <option value="4">4 Hours</option>
+                                <option value="5">5 Hours</option>
+                                <option value="6">6 Hours</option>
+                                <option value="7">7 Hours</option>
+                                <option value="8">8 Hours</option>
+                            </select>
+                        </div><br>
+                        <div>
+                            How was your sleep quality before cancer diagnosis? 
+                            <select class="form-select" name="qsbc">
+                                <option selected disabled>Open this select menu</option>
+                                <option value="Very Good">Very Good</option>
+                                <option value="Good">Good</option>
+                                <option value="Bad">Bad</option>
+                                <option value="Average">Average</option>
+                            </select>
+                        </div><br>
+                        <div>
+                            How would you rate your sleep quality during past month?  
+                            <select class="form-select" name="rsqpm">
+                                <option selected disabled>Open this select menu</option>
+                                <option value="0">Very Good</option>
+                                <option value="1">Fairly Good</option>
+                                <option value="2">Fairly Bad</option>
+                                <option value="3">Very Bad</option>
+                            </select>
+                        </div><br>
+                        
+                    </div>
+
+                    <!-- Second Column -->
+                    <div class="col-md-4">
+                        
+                        <div><br><br>
+                            During the past month, how often have you had trouble sleeping because you:<br>
+        &emsp;<label for="sleep30mins">Cannot get to sleep within 30 min</label>
+         <select class="form-select" aria-label="Default select example" name="st">
+             <option value="0">Not during the past month</option>
+             <option value="1">Less than once a week</option>
+             <option value="2">Once or twice a week</option>
+             <option value="3">Three or more times a week</option>
+           </select>
+       </div>
+                        <div><br>
+                            &emsp;<label for="sleep30mins">Wakeup in the midlle of night or early morning</label>
+                <select class="form-select" aria-label="Default select example" name="wt">
+                  <option value="0">Not during the past month</option>
+                  <option value="1">Less than once a week</option>
+                  <option value="2">Once or twice a week</option>
+                  <option value="3">Three or more times a week</option>
+                </select>
+            </div><br>
+                        <div>
+                            &emsp;<label for="sleep30mins">Have to get up to use the bathroom</label>
+                            <select class="form-select" aria-label="Default select example" name="bath">
+                              <option value="0">Not during the past month</option>
+                              <option value="1">Less than once a week</option>
+                              <option value="2">Once or twice a week</option>
+                              <option value="3">Three or more times a week</option>
+                            </select>
+                        </div><br>
+                        <div class="col">
+                            &emsp;<label for="sleep30mins">Cannot breathe comfortably</label>
+                              <select class="form-select" aria-label="Default select example" name="rp">
+                                <option value="0">Not during the past month</option>
+                                <option value="1">Less than once a week</option>
+                                <option value="2">Once or twice a week</option>
+                                <option value="3">Three or more times a week</option>
+                              </select>
+                          </div><br>
+                          <div class="col">
+                            &emsp; <label for="sleep30mins">Cough or snore loudly</label>
+                              <select class="form-select" aria-label="Default select example" name="csl">
+                                <option value="0">Not during the past month</option>
+                                <option value="1">Less than once a week</option>
+                                <option value="2">Once or twice a week</option>
+                                <option value="3">Three or more times a week</option>
+                              </select>
+                          </div><br>
+                          <div class="col">
+                            &emsp;  <label for="sleep30mins">Feel too cold</label>
+                              <select class="form-select" aria-label="Default select example" name="cl">
+                                <option value="0">Not during the past month</option>
+                                <option value="1">Less than once a week</option>
+                                <option value="2">Once or twice a week</option>
+                                <option value="3">Three or more times a week</option>
+                              </select>
+                          </div><br>
+                          <div class="col">
+                            &emsp;  <label for="sleep30mins">Feel too hot</label>
+                              <select class="form-select" aria-label="Default select example" name="ho">
+                                <option value="0">Not during the past month</option>
+                                <option value="1">Less than once a week</option>
+                                <option value="2">Once or twice a week</option>
+                                <option value="3">Three or more times a week</option>
+                              </select>
+                          </div><br>
+                        <div class="col">
+                            &emsp; <label for="sleep30mins">Had bad dreams </label>
+                              <select class="form-select" aria-label="Default select example" name="bd">
+                                <option value="0">Not during the past month</option>
+                                <option value="1">Less than once a week</option>
+                                <option value="2">Once or twice a week</option>
+                                <option value="3">Three or more times a week</option>
+                              </select>
+                          </div><br>
+                          <div class="col">
+                            &emsp; <label for="sleep30mins"> Have pain</label>
+                              <select class="form-select" aria-label="Default select example" name="pa">
+                                <option value="0">Not during the past month</option>
+                                <option value="1">Less than once a week</option>
+                                <option value="2">Once or twice a week</option>
+                                <option value="3">Three or more times a week</option>
+                              </select>
+                          </div><br>
+                       
+                    </div>
+
+                    <!-- Third Column -->
+                    <div class="col-md-4">
+                          <div class="col"><br><br>
+                            <label >Have you taken medicine to help you sleep?</label>
+                            <select class="form-select" aria-label="Default select example" name="ms">
+                              <option value="0">Not during the past month</option>
+                              <option value="1">Less than once a week</option>
+                              <option value="2">Once or twice a week</option>
+                              <option value="3">Three or more times a week</option>
+                            </select>
+                        </div><br>
+                        <div class="col">
+                            <label>Do you have trouble staying awake while driving,eating meals or engaging in social activity?  </label>
+                            <select class="form-select" aria-label="Default select example" name="wp">
+                              <option value="0">Not during the past month</option>
+                              <option value="1">Less than once a week</option>
+                              <option value="2">Once or twice a week</option>
+                              <option value="3">Three or more times a week</option>
+                            </select>
+                        </div><br> 
+                        <div class="col">
+                            <label >Do you feel enough enthusiasm to get things done?</label>
+                            <select class="form-select" aria-label="Default select example" name="ed">
+                              <option value="0">Not during the past month</option>
+                              <option value="1">Less than once a week</option>
+                              <option value="2">Once or twice a week</option>
+                              <option value="3">Three or more times a week</option>
+                            </select>
+                        </div><br>
+                        <div class="col">
+                            <label >Do you snore loudly?</label>
+                            <select class="form-select" aria-label="Default select example" name="sl">
+                              <option value="0">Not during the past month</option>
+                              <option value="1">Less than once a week</option>
+                              <option value="2">Once or twice a week</option>
+                              <option value="3">Three or more times a week</option>
+                            </select>
+                        </div><br>
+                        <div class="col">
+                            <label >Do you have long pauses between breathes while sleep? </label>
+                            <select class="form-select" aria-label="Default select example" name="bws">
+                              <option value="0">Not during the past month</option>
+                              <option value="1">Less than once a week</option>
+                              <option value="2">Once or twice a week</option>
+                              <option value="3">Three or more times a week</option>
+                            </select>
+                        </div><br>
+                        <div class="col">
+                            <label>Do you have legs twitching or jerking while asleep?</label>
+                            <select class="form-select" aria-label="Default select example" name="tjs">
+                              <option value="0">Not during the past month</option>
+                              <option value="1">Less than once a week</option>
+                              <option value="2">Once or twice a week</option>
+                              <option value="3">Three or more times a week</option>
+                            </select>
+                        </div><br>
+                        <div class="col">
+                            <label>Do you have episodes of disorientation or confusion during sleep?</label>
+                            <select class="form-select" aria-label="Default select example" name="dcs">
+                              <option value="0">Not during the past month</option>
+                              <option value="1">Less than once a week</option>
+                              <option value="2">Once or twice a week</option>
+                              <option value="3">Three or more times a week</option>
+                            </select>
+                    </div><br>
+                    
+                    <div>
+                        Did you experience any behavioral issues in the past before breast cancer diagnosis? <br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Stress" name="bi">
+                            <label class="form-check-label" for="inlineCheckbox1">Stress</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Depression" name="bi">
+                            <label class="form-check-label" for="inlineCheckbox2">Depression</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="Anxiety" name="bi">
+                            <label class="form-check-label" for="inlineCheckbox3">Anxiety</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="Insomnia" name="bi">
+                            <label class="form-check-label" for="inlineCheckbox4">Insomnia</label>
+                        </div>
+                    </div><br>
+                </div>
+                <center> <input type="submit" name="submit" value="Submit Information" class="btn btn-success"></center>
+            </form>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    {% include 'nav.html' %}
+    <style>
+        .welcome-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .message-box {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <div class="message-box">
+            <h1>Sleep Pattern Prediction Tool for Breast Cancer Survivors</h1>
+            <p>Dear survivor,</p>
+            <p>We understand the challenges you are facing in this journey. We tried to contribute a little to make your life better by developing this sleep pattern prediction tool "Sleep With Serenity and Observance-SwSo" through which you can track your sleep quality and follow recommendations to improve it.</p>
+            <p>Sending you lots of strength, courage and positivity.</p>
+            <p>-by: Prof (Dr.) Sonal Sharma and Dr. Swati Singh.</p>
+            <p>To know your sleep quality and pattern, please <a href="{% url 'login' %}">login here</a>. New users please <a href="{% url 'register' %}">Register here</a>.</p>
+        </div>
+    </div>
+</body>
+</html>

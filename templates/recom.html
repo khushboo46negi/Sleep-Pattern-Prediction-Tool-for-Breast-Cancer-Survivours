@@ -1,0 +1,17 @@
+{% include 'nav.html' %}
+<body>
+    <center>
+        <h1>Welcome to the Recommendation Page</h1>
+    
+        {% if username %}
+            <p>Hello, {{ username }}!</p>
+        {% endif %}
+    
+        {% if recommendation %}
+            <p>Your PSQI score indicates poor sleep quality. Here are some recommendations:</p>
+            <a href="/recommendation">Go to Recommendations</a>
+        {% else %}
+            <p>Your sleep quality is good. No recommendations at this time.</p>
+        {% endif %}
+    </center>
+</body>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVM Results</title>
+</head>
+{% include 'nav.html' %}
+<body>
+    <!-- SVM Plot -->
+    <h2>SVM Correlation Heatmap:</h2>
+    <img src="data:image/png;base64,{{ svm_plot }}" alt="SVM Correlation Heatmap" />
+    
+    <!-- Confusion Matrix -->
+    <h2>Confusion Matrix:</h2>
+    <img src="data:image/png;base64,{{ confusion_matrix }}" alt="Confusion Matrix" />
+    
+    <!-- Classification Report -->
+    <h2>Classification Report:</h2>
+    <pre>{{ classification_report | safe }}</pre>
+</body>
+</html>
